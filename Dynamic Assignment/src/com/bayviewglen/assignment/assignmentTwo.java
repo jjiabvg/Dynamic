@@ -15,7 +15,7 @@ public class assignmentTwo {
 			return Math.max( donations[0], donations[1]); 
 		}
 		else if(neighborNum == 3){
-			return Math.max( donations[0]+donations[2], donations[1]); 
+			return Math.max( Math.max(donations[0],donations[2]), donations[1]); 
 		}
 		else{
 
@@ -53,9 +53,7 @@ public class assignmentTwo {
 	}
 	public static void main(String[] args){
 
-		int[] donations = { 94, 40, 49, 65, 21, 21, 106, 80, 92, 81, 679, 4, 61,  
-				  6, 237, 12, 72, 74, 29, 95, 265, 35, 47, 1, 61, 397,
-				  52, 72, 37, 51, 1, 81, 45, 435, 7, 36, 57, 86, 81, 72 }; 
+		int[] donations = { 1,2,3 }; 
 		System.out.println(Americans(donations)); 
 	}
 
