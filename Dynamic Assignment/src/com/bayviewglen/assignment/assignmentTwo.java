@@ -44,14 +44,13 @@ public class assignmentTwo {
 		
 		int[] donations = null; 
 		Scanner scanner = new Scanner(System.in);
-		int [] sequence = null; 
 		int length; 
 		System.out.println("Enter the length of the sequence"); 
 		length = scanner.nextInt(); 
-		sequence = new int[length]; 
+		donations = new int[length]; 
 		System.out.println("Enter the sequence");
 		System.out.println("Enter one number then hit enter.");
-	    for (int i = 0; i < sequence.length; i++) { //load the numbers into an array 
+	    for (int i = 0; i < donations.length; i++) { //load the numbers into an array 
 	    	donations[i] = scanner.nextInt();
 	    }
 
