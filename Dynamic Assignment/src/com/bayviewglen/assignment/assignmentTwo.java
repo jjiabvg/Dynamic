@@ -1,6 +1,7 @@
 package com.bayviewglen.assignment;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class assignmentTwo {
 
@@ -40,9 +41,20 @@ public class assignmentTwo {
 		return solution;
 	}
 	public static void main(String[] args){
-		int[] donations ={94, 40, 49, 65, 21, 21, 106, 80, 92, 81, 679, 4, 61,  
-				  6, 237, 12, 72, 74, 29, 95, 265, 35, 47, 1, 61, 397,
-				  52, 72, 37, 51, 1, 81, 45, 435, 7, 36, 57, 86, 81, 72};
+		
+		int[] donations = null; 
+		Scanner scanner = new Scanner(System.in);
+		int [] sequence = null; 
+		int length; 
+		System.out.println("Enter the length of the sequence"); 
+		length = scanner.nextInt(); 
+		sequence = new int[length]; 
+		System.out.println("Enter the sequence");
+		System.out.println("Enter one number then hit enter.");
+	    for (int i = 0; i < sequence.length; i++) { //load the numbers into an array 
+	    	donations[i] = scanner.nextInt();
+	    }
+
 		System.out.println(Americans(donations)); 
 	}
 
