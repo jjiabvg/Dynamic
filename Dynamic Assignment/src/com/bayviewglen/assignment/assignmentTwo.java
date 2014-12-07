@@ -22,7 +22,7 @@ public class assignmentTwo {
 		dp[2] = Math.max(d1[0]+d1[2], d1[1]); 
 		
 		for(int i = 3; i<neighborNum-1;i++){
-			dp[i] = Math.max( dp[i - 2] , dp[i - 3]) + d1[i];
+			dp[i] = Math.max( dp[i - 2] , dp[i - 3]) + d1[i]; //do it for situation one
 		}
 		
 		dp2[0] = d2[0];
@@ -30,10 +30,10 @@ public class assignmentTwo {
 		dp2[2] = Math.max(d2[0]+d2[2], d2[1]); 
 
 		for(int i = 3; i<neighborNum-1;i++){
-			dp2[i] = Math.max( dp2[i - 2] , dp2[i - 3]) + d2[i];
+			dp2[i] = Math.max( dp2[i - 2] , dp2[i - 3]) + d2[i];//do it for situation two
 		}
 		int solution; 
-		solution = Math.max(dp[neighborNum-2], dp2[neighborNum-2]); 
+		solution = Math.max(dp[neighborNum-2], dp2[neighborNum-2]); //answer is the maximum
 
 
 
