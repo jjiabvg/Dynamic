@@ -53,7 +53,7 @@ public class assignmentTwo {
 	}
 	public static void main(String[] args){
 
-		int[] donations = { 1,2,3 }; 
+		int[] donations = {610, 467, 596, 278, 889, 334, 886, 721, 842, 708, 610, 491, 985, 995, 219, 710, 78, 267, 887, 404, 152, 372, 127, 152, 915}; 
 		System.out.println(Americans(donations)); 
 	}
 

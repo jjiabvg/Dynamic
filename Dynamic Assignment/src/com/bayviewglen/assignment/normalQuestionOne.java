@@ -8,17 +8,18 @@ public class normalQuestionOne {
 	public static int zigZag(int [] sequence){
 		
 		int sequenceLength = sequence.length; 
-			int []positiveResult = new int[sequenceLength]; 
-			int []negativeResult = new int[sequenceLength]; 
+			int []positiveResult = new int[sequenceLength];  //one array for the case when Ax+1 > Ax
+			int []negativeResult = new int[sequenceLength];  //one array for the case when Ax+1 > Ax
 			int best = 1;
-			positiveResult[0] = 1; 
+			positiveResult[0] = 1; // if there is only one number, it can only be 1
 			negativeResult[0] = 1; 
 
 
 		for(int i = 1; i < sequenceLength; i++){
 			for(int j = i-1; j>= 0; j--){
 				if(sequence[j] < sequence[i]) //dynamic programming
-					positiveResult[i] = Math.max(negativeResult[j]+1,positiveResult[i]);
+					positiveResult[i] = Math.max(negativeResult[j]+1,positiveResult[i]); // check the number by going across the two array
+				// because it has to go positive then negative
 				else if(sequence[j] > sequence[i]) 
 					negativeResult[i] = Math.max(positiveResult[j]+1, negativeResult[i]);
 			}
